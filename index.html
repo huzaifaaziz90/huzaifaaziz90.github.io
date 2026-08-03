@@ -117,7 +117,7 @@
 <section id="projects" class="wrap" style="padding:24px 24px 72px;">
   <h6 style="color:var(--color-accent-700);">Selected delivery work</h6>
   <h2>Project Gallery</h2>
-  <p class="text-muted" style="max-width:620px;">Business-analysis and delivery work from the Bit Development / Sandline Global R&amp;D wing.</p>
+  <p class="text-muted" style="max-width:620px;">Business-analysis and delivery work from the Bit Development / Sandline Global R&amp;D wing, plus open-source procurement analytics projects on GitHub.</p>
   <div id="proj-filters" style="display:flex; gap:8px; margin:20px 0 26px; flex-wrap:wrap;"></div>
   <div id="proj-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;"></div>
 </section>
@@ -174,6 +174,10 @@
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="8" y1="11" x2="8" y2="16"></line><circle cx="8" cy="8" r="0.6" fill="currentColor"></circle><path d="M12 16v-3a2 2 0 0 1 4 0v3"></path><line x1="12" y1="11" x2="12" y2="16"></line></svg>
           LinkedIn profile
         </a>
+        <a href="https://github.com/huzaifaaziz90" target="_blank" style="display:flex; align-items:center; gap:12px; color:var(--color-text);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.35 9.35 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          GitHub profile
+        </a>
         <div style="display:flex; align-items:center; gap:12px;">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
           Ilmenau, Germany
@@ -226,6 +230,9 @@ const EXPERIENCES = [
 ];
 
 const PROJECTS = [
+  { id:'powerbi', title:'Power BI Procurement Dashboard', tag:'Data & Reporting', desc:'Procurement KPI dashboard with 15+ DAX measures: order pipeline, department workload, negotiated savings, supplier spend and cycle times. Includes data model and full build guide.', link:'https://github.com/huzaifaaziz90/project1-powerbi-dashboard' },
+  { id:'priorityauto', title:'Priority Item Reporting Automation', tag:'Data & Reporting', desc:'Flags procurement orders needing urgent action using three alert rules and generates per-department summaries. Python version plus the original Google Apps Script email-dispatch implementation.', link:'https://github.com/huzaifaaziz90/project3-priority-automation' },
+  { id:'llmreports', title:'LLM-Assisted Report Generator', tag:'Data & Reporting', desc:'Generates natural-language procurement status summaries per department from structured order data using the Anthropic API. Built on top of the priority automation.', link:'https://github.com/huzaifaaziz90/project4-llm-reports' },
   { id:'translate', title:'Translation & Transcription Tool', tag:'Systems Integration', desc:'Requirements and task breakdown for translation/transcription features across Google, AWS and Azure services — toggle logic, provider routing, export handling.' },
   { id:'etl', title:'Modern ETL Pipeline', tag:'Data & Reporting', desc:'Requirements for UFDR, Slack JSON and Teams PST extraction — refined JSON output, metadata handling, deduplication and report generation.' },
   { id:'billing', title:'Storage Tracker & Billing Dashboard', tag:'Data & Reporting', desc:'Requirements for billing data visibility, matter data, filters, CSV export, NetSuite ingestion and reporting improvements.' },
@@ -288,6 +295,10 @@ function renderProjects() {
       <div class="card-kicker">${esc(p.tag)}</div>
       <div class="card-title">${esc(p.title)}</div>
       <p class="card-body">${esc(p.desc)}</p>
+      ${p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; margin-top:10px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.35 9.35 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        View on GitHub
+      </a>` : ''}
     </div>`).join('');
 }
 ['All', 'Data & Reporting', 'Systems Integration'].forEach(f => {
@@ -368,7 +379,11 @@ function commands() {
     { label: isDark ? 'Switch to light mode' : 'Switch to dark mode', hint: 'Theme', run: () => themeBtn.click() },
     { label: 'Copy email address', hint: 'Contact', run: () => { try { navigator.clipboard.writeText('huzaifaaziz90@gmail.com'); } catch (e) {} } },
     { label: 'Download résumé (PDF)', hint: 'Open', run: () => window.open('resume-print.html?print=1', '_blank') },
-    { label: 'Open LinkedIn profile', hint: 'Open', run: () => window.open('https://www.linkedin.com/in/huzaifah-aziz-63092996/', '_blank') }
+    { label: 'Open LinkedIn profile', hint: 'Open', run: () => window.open('https://www.linkedin.com/in/huzaifah-aziz-63092996/', '_blank') },
+    { label: 'Open GitHub profile', hint: 'Open', run: () => window.open('https://github.com/huzaifaaziz90', '_blank') },
+    { label: 'Open Power BI Dashboard repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/project1-powerbi-dashboard', '_blank') },
+    { label: 'Open Priority Automation repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/project3-priority-automation', '_blank') },
+    { label: 'Open LLM Reports repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/project4-llm-reports', '_blank') }
   ];
 }
 function renderPalette() {
