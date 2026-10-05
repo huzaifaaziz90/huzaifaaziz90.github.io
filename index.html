@@ -1,513 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Huzaifa Aziz — Résumé</title>
-<link rel="stylesheet" href="_ds/industry-6aa77905-94e8-4bad-974b-2b4f5ac9e618/styles.css">
-<style>
-html { scroll-behavior: smooth; }
-body { margin:0; min-height:100vh; background:var(--color-bg); color:var(--color-text); font-family:var(--font-body); transition:background .25s ease, color .25s ease; }
-a { color: var(--color-accent); text-decoration: none; }
-a:hover { color: var(--color-accent-700); }
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background: var(--color-neutral-400); }
-body[data-theme="dark"] {
-  --color-bg:#1d2d3d; --color-surface:#2c455d; --color-text:#eef3f8; --color-divider:rgba(238,243,248,0.2);
-  --color-neutral-100:#2c455d; --color-neutral-200:#33506b; --color-neutral-800:#d6ebff; --color-accent-100:#2c455d; --color-accent-800:#d6ebff;
-}
-.wrap { max-width:1160px; margin:0 auto; padding:0 24px; }
-.hero-stat { padding:16px 18px; }
-.hero-stat .val { font-family:var(--font-heading); font-size:28px; color:var(--color-accent-700); line-height:1; }
-.hero-stat .lbl { font-size:12px; margin-top:4px; }
-.job { position:relative; margin-bottom:18px; }
-.job-dot { position:absolute; left:-28px; top:6px; width:11px; height:11px; border:1.5px solid var(--color-accent); background:var(--color-bg); }
-.job-card { padding:18px 22px; cursor:pointer; }
-.job-head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; }
-.job-role { font-family:var(--font-heading); font-size:20px; }
-.job-meta { font-size:13px; margin-top:2px; }
-.job-tags { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
-.job-bullets { margin:16px 0 0; padding-left:18px; font-size:14px; line-height:1.7; opacity:.9; display:none; }
-.job.expanded .job-bullets { display:block; }
-.job-chevron { transition:transform .2s ease; }
-.job.expanded .job-chevron { transform:rotate(180deg); }
-.skill-bar-track { height:5px; background:var(--color-neutral-200); position:relative; margin-bottom:12px; }
-.skill-bar-fill { height:100%; background:var(--color-accent); width:0%; transition:width 1.1s cubic-bezier(.16,.9,.3,1); }
-.lang-bar-fill { height:100%; background:var(--color-accent-2); width:0%; transition:width 1.1s cubic-bezier(.16,.9,.3,1); }
-.proj-card { display:none; }
-.proj-card.visible { display:block; }
-
-/* ── Featured project banner ── */
-.featured-proj {
-  border:2px solid var(--color-accent);
-  border-radius:0;
-  padding:28px 30px;
-  margin-bottom:32px;
-  position:relative;
-  background:var(--color-accent-100);
-}
-.featured-proj .fp-eyebrow {
-  font-size:11px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--color-accent-700);
-  font-weight:600;
-  margin-bottom:10px;
-}
-.featured-proj .fp-title {
-  font-family:var(--font-heading);
-  font-size:26px;
-  margin:0 0 10px;
-}
-.featured-proj .fp-desc {
-  font-size:14px;
-  line-height:1.7;
-  opacity:.88;
-  max-width:680px;
-  margin:0 0 16px;
-}
-.featured-proj .fp-stack {
-  display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;
-}
-.featured-proj .fp-kpis {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:10px;
-  margin-bottom:20px;
-}
-.fp-kpi {
-  background:var(--color-bg);
-  border:1px solid var(--color-divider);
-  padding:10px 14px;
-  font-size:12px;
-  line-height:1.5;
-}
-.fp-kpi strong { display:block; font-size:13px; margin-bottom:2px; color:var(--color-accent-700); }
-.featured-badge {
-  position:absolute; top:-1px; right:24px;
-  background:var(--color-accent);
-  color:#fff;
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.07em;
-  padding:3px 10px;
-  text-transform:uppercase;
-}
-
-#palette-backdrop { position:fixed; inset:0; z-index:100; background:rgba(29,31,32,0.55); display:none; align-items:flex-start; justify-content:center; padding:12vh 20px 20px; }
-#palette-backdrop.open { display:flex; }
-#palette-list { max-height:340px; overflow-y:auto; padding:8px; }
-.palette-item { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 12px; cursor:pointer; font-size:14px; }
-.palette-item:hover { background: rgba(89,128,166,0.1); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="Huzaifa Aziz connects procurement operations, business analysis and practical data tools. Based in Berlin, Germany.">
+  <title>Huzaifa Aziz | Procurement, Analysis & Product Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f4f1e9;--ink:#18251f;--muted:#647169;--line:#d6d9ce;--green:#315c48;--lime:#d6f278;--orange:#c86b42;--card:#fffefa;--shadow:0 18px 50px #18251f0d;--sans:'DM Sans',sans-serif;--display:'Manrope',sans-serif;--mono:'DM Mono',monospace;color-scheme:light}
+    [data-theme=dark]{--paper:#141c19;--ink:#eaf0e8;--muted:#a2afa5;--line:#354139;--green:#9dc5a9;--lime:#d6f278;--orange:#ee9c74;--card:#1d2823;--shadow:0 18px 50px #0003;color-scheme:dark}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.mono{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}.muted{color:var(--muted)}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}.topbar{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 91%,transparent);backdrop-filter:blur(14px);z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{font:800 17px var(--display);letter-spacing:-.05em}.brand b{color:var(--orange)}.navlinks{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--muted)}.navlinks a:hover,.textlink:hover{color:var(--orange)}.navtools{display:flex;align-items:center;gap:9px}.iconbtn,.menu-btn{height:38px;padding:0 12px;border:1px solid var(--line);background:var(--card);border-radius:5px;cursor:pointer;font-size:12px}.menu-btn{display:none}
+    .hero{padding:70px 0 64px;display:grid;grid-template-columns:1.28fr .72fr;gap:64px;align-items:center}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--green)}.dot{width:8px;height:8px;border-radius:50%;background:#72a66d;box-shadow:0 0 0 5px color-mix(in srgb,#72a66d 16%,transparent)}h1,h2,h3,p{margin-top:0}h1{font:700 clamp(46px,7vw,86px)/.99 var(--display);letter-spacing:-.075em;margin:27px 0 23px;max-width:770px}.hero h1 span{color:var(--green)}.hero-copy{max-width:600px;color:var(--muted);font-size:17px;line-height:1.8}.hero-copy strong{color:var(--ink);font-weight:600}.actions{display:flex;gap:11px;flex-wrap:wrap;margin:27px 0 28px}.button{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--green);background:var(--green);color:#fff;border-radius:4px;font-size:13px;font-weight:600;transition:transform .18s,background .18s}.button:hover{transform:translateY(-2px);background:#254735}.button.secondary{color:var(--ink);background:transparent;border-color:var(--line)}.button.secondary:hover{border-color:var(--green);background:var(--card)}.quickfacts{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:12px}.quickfacts span{display:flex;align-items:center;gap:7px}.quickfacts i{width:4px;height:4px;background:var(--orange);border-radius:50%}
+    .portrait-wrap{position:relative;max-width:365px;justify-self:end;width:100%}.portrait-frame{aspect-ratio:4/5;background:#dce1d4;overflow:hidden;border-radius:45% 45% 4px 4px;position:relative;box-shadow:var(--shadow)}.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 34%;filter:saturate(.82)}.portrait-mark{position:absolute;right:-21px;bottom:23px;background:var(--lime);padding:15px 18px;max-width:190px;box-shadow:var(--shadow);transform:rotate(-3deg)}.portrait-mark b{display:block;font:700 13px var(--display)}.portrait-mark span{font-size:11px;color:#41523d}.portrait-note{position:absolute;top:23px;left:-30px;background:var(--card);padding:12px 14px;border:1px solid var(--line);font:11px var(--mono);transform:rotate(-4deg)}
+    .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}.proof-item{padding:9px 22px;border-right:1px solid var(--line)}.proof-item:first-child{padding-left:0}.proof-item:last-child{border:0}.proof-num{display:block;font:700 28px var(--display);letter-spacing:-.06em;color:var(--green)}.proof-label{font-size:11px;color:var(--muted);line-height:1.45}
+    section.content{padding:86px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.section-head h2{font:700 clamp(30px,4vw,45px)/1.05 var(--display);letter-spacing:-.06em;margin:9px 0 0}.section-head p{max-width:390px;font-size:13px;color:var(--muted);margin:0}.section-no{color:var(--orange)}
+    .story-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px}.story-lede{padding:31px;background:var(--green);color:#f4f4eb;min-height:275px;display:flex;flex-direction:column;justify-content:space-between}.story-lede .mono{color:var(--lime)}.story-lede h3{font:600 28px/1.23 var(--display);letter-spacing:-.05em;margin:30px 0 0;max-width:360px}.story-right{background:var(--card);border:1px solid var(--line);padding:28px 30px;box-shadow:var(--shadow);display:flex;align-items:center}.story-right p{font-size:15px;line-height:1.9;color:var(--muted);margin:0}.story-right strong{color:var(--ink)}
+    .experience{display:grid;grid-template-columns:230px 1fr;gap:55px}.exp-intro{position:sticky;top:105px;align-self:start}.exp-intro p{font-size:13px;color:var(--muted);line-height:1.8}.timeline{border-top:1px solid var(--line)}.job{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:190px 1fr;gap:25px}.job time{font:11px var(--mono);color:var(--muted);padding-top:5px}.job h3{font:700 18px var(--display);letter-spacing:-.04em;margin:0}.job-org{font-size:12px;color:var(--green);margin:3px 0 12px}.job ul{margin:0;padding-left:17px;color:var(--muted);font-size:13px;line-height:1.8}.job li+li{margin-top:5px}.job-more{margin-top:12px;border:0;background:none;color:var(--green);padding:0;font-size:12px;font-weight:700;cursor:pointer}.job .extra{display:none}.job.open .extra{display:list-item}
+    .project-feature{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr .9fr;min-height:360px;overflow:hidden}.project-copy{padding:35px}.project-top{display:flex;justify-content:space-between;gap:16px;align-items:center}.project-label{color:var(--orange)}.project-copy h3{font:700 35px/.98 var(--display);letter-spacing:-.07em;margin:30px 0 16px}.project-copy p{max-width:550px;color:var(--muted);font-size:14px;line-height:1.85}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:19px 0 24px}.chip{border:1px solid var(--line);padding:5px 9px;border-radius:3px;font:10px var(--mono);color:var(--muted)}.project-art{position:relative;min-height:330px;background:#24362c;overflow:hidden;padding:28px;color:#e9f0e8}.gridlines{position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:29px 29px}.mock{position:relative;z-index:1;border:1px solid #ffffff29;background:#1c2b23e8;border-radius:5px;padding:17px;max-width:370px;margin:20px auto;box-shadow:0 20px 55px #0006;transform:rotate(-2deg)}.mock-head{display:flex;justify-content:space-between;align-items:center;font-size:11px;border-bottom:1px solid #ffffff20;padding-bottom:12px}.mock-logo{font:700 12px var(--display)}.mock-logo i{color:var(--lime);font-style:normal}.mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.mock-stat{background:#ffffff0c;padding:10px 9px}.mock-stat b{font:600 16px var(--display);display:block;color:var(--lime)}.mock-stat small{font-size:9px;color:#aab9ae}.mock-row{display:grid;grid-template-columns:1.2fr .8fr .7fr;gap:7px;align-items:center;border-top:1px solid #ffffff16;padding:9px 2px;font-size:9px;color:#cbd6cc}.pill{border-radius:20px;padding:3px 7px;background:#b3d28223;color:#d6f278;width:max-content}.mock-bars{height:48px;display:flex;align-items:end;gap:5px;margin:8px 0 2px}.mock-bars i{width:9%;background:#9fbd79;border-radius:2px 2px 0 0;opacity:.9}.project-note{position:absolute;bottom:21px;right:18px;font:10px var(--mono);color:#bac8ba}
+    .project-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}.mini-project{padding:23px;border:1px solid var(--line);background:transparent;transition:background .2s,transform .2s}.mini-project:hover{background:var(--card);transform:translateY(-3px)}.mini-project h3{font:700 19px var(--display);letter-spacing:-.04em;margin:17px 0 9px}.mini-project p{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:14px}.mini-project .textlink{font-size:12px;color:var(--green);font-weight:700}
+    .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.cap{padding:22px;border-top:2px solid var(--green);background:var(--card);min-height:165px}.cap .mono{color:var(--orange)}.cap h3{font:700 16px var(--display);margin:17px 0 8px}.cap p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}.education{display:grid;grid-template-columns:1fr 1fr;gap:14px}.edu{border:1px solid var(--line);padding:20px;background:var(--card)}.edu h3{font:600 16px var(--display);margin:10px 0 4px}.edu p{font-size:12px;color:var(--muted);margin:0}.edu .mono{color:var(--green)}
+    .contact{background:var(--green);color:#f3f1e8;padding:47px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.contact .mono{color:var(--lime)}.contact h2{font:700 clamp(34px,5vw,57px)/.98 var(--display);letter-spacing:-.07em;margin:15px 0}.contact p{font-size:13px;color:#d3ded3;max-width:420px}.contact-links{display:grid;gap:10px}.contact-links a{border-bottom:1px solid #ffffff39;padding:9px 0;display:flex;justify-content:space-between;gap:10px;font-size:13px}.contact-links a span{font:10px var(--mono);color:var(--lime)}footer{padding:22px 0 35px;display:flex;justify-content:space-between;color:var(--muted);font:10px var(--mono)}.reveal{opacity:0;transform:translateY(15px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}.palette{position:fixed;inset:0;z-index:30;background:#0007;display:none;align-items:flex-start;justify-content:center;padding:15vh 20px}.palette.show{display:flex}.palette-box{width:min(510px,100%);background:var(--card);padding:12px;border:1px solid var(--line);box-shadow:var(--shadow)}.palette input{width:100%;padding:13px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);outline:0}.palette a{display:block;padding:11px 13px;font-size:13px;color:var(--muted)}.palette a:hover{background:var(--paper);color:var(--ink)}
+    @media(max-width:800px){.wrap{width:min(100% - 32px,650px)}.navlinks{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;gap:36px;padding:50px 0}.portrait-wrap{justify-self:center;width:min(300px,78%)}.proof-grid{grid-template-columns:repeat(2,1fr)}.proof-item:nth-child(2){border:0}.proof-item:nth-child(n+3){border-top:1px solid var(--line);margin-top:10px;padding-top:17px}.story-grid,.project-feature,.contact{grid-template-columns:1fr}.story-lede{min-height:200px}.project-art{min-height:320px}.experience{grid-template-columns:1fr;gap:24px}.exp-intro{position:static}.job{grid-template-columns:125px 1fr;gap:15px}.cap-grid{grid-template-columns:1fr 1fr}.contact{padding:30px}}
+    @media(max-width:520px){h1{font-size:52px}.section-head{display:block}.section-head p{margin-top:14px}.proof-item{padding-left:14px;padding-right:10px}.job{grid-template-columns:1fr;gap:5px}.job time{font-size:10px}.project-copy{padding:24px}.project-art{padding:17px}.mock{padding:13px}.project-pair,.education,.cap-grid{grid-template-columns:1fr}.quickfacts{gap:10px 14px}.contact{padding:26px 22px}footer{gap:15px;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
-<body data-theme="light">
-
-<div id="palette-backdrop">
-  <div class="blueprint elev-lg" style="width:min(560px,100%); background:var(--color-bg); padding:0;">
-    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-    <div style="display:flex; align-items:center; gap:10px; padding:14px 18px; border-bottom:1px solid var(--color-divider);">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input id="palette-input" placeholder="Type a command or destination…" style="flex:1; border:none; outline:none; background:transparent; color:var(--color-text); font-family:var(--font-body); font-size:15px;">
-      <span class="tag tag-neutral">Esc</span>
-    </div>
-    <div id="palette-list"></div>
-  </div>
-</div>
-
-<div style="position:sticky; top:0; z-index:40; background:var(--color-bg); backdrop-filter:blur(8px); border-bottom:1px solid var(--color-divider);">
-  <nav class="nav wrap" style="padding:14px 24px;">
-    <a href="#top" class="nav-brand">Huzaifa Aziz</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-    <button class="btn btn-secondary btn-icon" id="palette-btn" title="Command palette (Cmd+K)" aria-label="Open command palette">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect></svg>
-    </button>
-    <button class="btn btn-secondary btn-icon" id="theme-btn" title="Toggle light / dark" aria-label="Toggle theme">
-      <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none;"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="2" x2="12" y2="4.5"></line><line x1="12" y1="19.5" x2="12" y2="22"></line><line x1="2" y1="12" x2="4.5" y2="12"></line><line x1="19.5" y1="12" x2="22" y2="12"></line><line x1="4.5" y1="4.5" x2="6.2" y2="6.2"></line><line x1="17.8" y1="17.8" x2="19.5" y2="19.5"></line><line x1="4.5" y1="19.5" x2="6.2" y2="17.8"></line><line x1="17.8" y1="6.2" x2="19.5" y2="4.5"></line></svg>
-      <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg>
-    </button>
-  </nav>
-</div>
-
-<section id="top" class="wrap" style="padding:72px 24px 40px; display:grid; grid-template-columns:repeat(12,1fr); gap:24px; align-items:end;">
-  <div style="grid-column:span 8;">
-    <div class="tag tag-outline" style="margin-bottom:16px;">Available for part-time &amp; ready for full-time roles</div>
-    <h1 style="font-size:clamp(40px,6vw,64px); margin:0 0 8px;">Huzaifa Aziz</h1>
-    <h2 style="font-size:clamp(18px,2.4vw,24px); font-weight:400; font-family:var(--font-body); color:var(--color-accent-700); margin:0 0 20px;">Procurement Operations · Business Analysis · Data &amp; Automation</h2>
-    <p style="max-width:640px; font-size:16px; opacity:.85;">Business Analyst and Procurement Operations professional who translates procurement workflows and stakeholder requirements into Power BI dashboards, Python automation, and documentation that keep both procurement and software delivery teams moving. I build the tools myself — see ProcureAlert below.</p>
-    <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
-      <a href="resume-print.html?print=1" target="_blank" class="btn btn-primary">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M4 19h16"></path></svg>
-        Download Résumé (PDF)
-      </a>
-      <a href="https://github.com/huzaifaaziz90/procurement-alert-system" target="_blank" rel="noopener" class="btn btn-secondary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.35 9.35 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        ProcureAlert on GitHub
-      </a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
-    </div>
-  </div>
-  <div style="grid-column:span 4; display:flex; flex-direction:column; gap:14px;">
-    <div class="blueprint hero-stat"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="val">1,000+</div><div class="lbl text-muted">Active PRs managed at Solvay</div></div>
-    <div class="blueprint hero-stat"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="val">~400</div><div class="lbl text-muted">Vendors in managed supplier base</div></div>
-    <div class="blueprint hero-stat"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="val">4</div><div class="lbl text-muted">Industries: petrochemical, fintech, SaaS, web</div></div>
-  </div>
-</section>
-
-<section id="about" class="wrap" style="padding:24px 24px 64px;">
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
-    <div class="card elev-sm"><div class="card-kicker">Part-Time</div><p class="card-body">Available for part-time roles — on site, hybrid or remote.</p></div>
-    <div class="card elev-sm"><div class="card-kicker">Full-time</div><p class="card-body">Ready to transition for the right full-time opportunity.</p></div>
-    <div class="card elev-sm"><div class="card-kicker">Based in Germany</div><p class="card-body">Schengen resident; open to European roles and relocation.</p></div>
-  </div>
-</section>
-
-<section id="experience" class="wrap" style="padding:24px 24px 72px;">
-  <h6 style="color:var(--color-accent-700);">Career history</h6>
-  <h2 style="margin-bottom:32px;">Professional Experience</h2>
-  <div style="position:relative; padding-left:28px;">
-    <div style="position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--color-divider);"></div>
-    <div id="jobs-list"></div>
-  </div>
-</section>
-
-<section id="projects" class="wrap" style="padding:24px 24px 72px;">
-  <h6 style="color:var(--color-accent-700);">Selected work</h6>
-  <h2 style="margin-bottom:8px;">Projects</h2>
-  <p class="text-muted" style="max-width:620px; margin-bottom:28px;">Open-source tools built from real procurement workflows, plus delivery work from the Sandline Global R&amp;D team.</p>
-
-  <!-- ── Featured: ProcureAlert ── -->
-  <div class="featured-proj">
-    <div class="featured-badge">Featured Project</div>
-    <div class="fp-eyebrow">Open-source · Python · Node.js · React · GitHub Actions</div>
-    <div class="fp-title">🔔 ProcureAlert — Automated Procurement Intelligence</div>
-    <p class="fp-desc">Built directly from the PR/PO workflows I ran at Solvay SHPCO. Reads your procurement data from Google Sheets, runs configurable KPI logic across 9 alert categories, and sends a formatted email digest every morning — fully automated via GitHub Actions. Includes a React setup wizard so any procurement team can configure it without touching code.</p>
-    <div class="fp-kpis">
-      <div class="fp-kpi"><strong>Overdue Deliveries</strong>Configurable days threshold</div>
-      <div class="fp-kpi"><strong>PRs Without RFQ</strong>Stuck requisitions flagged</div>
-      <div class="fp-kpi"><strong>High-Risk Vendors</strong>Multiple late orders detected</div>
-      <div class="fp-kpi"><strong>Cycle Time</strong>Avg PR-to-PO tracking</div>
-      <div class="fp-kpi"><strong>On-Time Rate</strong>Delivery performance %</div>
-      <div class="fp-kpi"><strong>Spend by Vendor</strong>Top 10 suppliers by value</div>
-    </div>
-    <div class="fp-stack">
-      <span class="tag tag-accent">Python + pandas</span>
-      <span class="tag tag-accent">Node.js + Express</span>
-      <span class="tag tag-accent">React</span>
-      <span class="tag tag-accent">GitHub Actions</span>
-      <span class="tag tag-neutral">Google Sheets API</span>
-      <span class="tag tag-neutral">Google Drive API</span>
-      <span class="tag tag-neutral">n8n / Zapier / Make</span>
-      <span class="tag tag-neutral">Power Automate</span>
-      <span class="tag tag-neutral">Railway</span>
-    </div>
-    <div style="display:flex; gap:12px; flex-wrap:wrap;">
-      <a href="https://github.com/huzaifaaziz90/procurement-alert-system" target="_blank" rel="noopener" class="btn btn-primary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.35 9.35 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        View on GitHub
-      </a>
-      <a href="#contact" class="btn btn-ghost">Ask me about it</a>
-    </div>
-  </div>
-
-  <!-- ── Rest of projects ── -->
-  <div id="proj-filters" style="display:flex; gap:8px; margin:0 0 26px; flex-wrap:wrap;"></div>
-  <div id="proj-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;"></div>
-</section>
-
-<section id="skills" class="wrap" style="padding:24px 24px 72px;">
-  <h6 style="color:var(--color-accent-700);">Capabilities</h6>
-  <h2 style="margin-bottom:32px;">Skills &amp; Tools</h2>
-  <div id="skills-grid" style="display:grid; grid-template-columns:repeat(2,1fr); gap:28px 40px;"></div>
-  <div id="langs-grid" style="margin-top:36px; display:grid; grid-template-columns:repeat(2,1fr); gap:28px 40px; max-width:600px;"></div>
-</section>
-
-<section id="education" class="wrap" style="padding:24px 24px 72px;">
-  <h6 style="color:var(--color-accent-700);">Academics</h6>
-  <h2 style="margin-bottom:32px;">Education</h2>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
-    <div class="blueprint" style="padding:18px 20px;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <div style="font-family:var(--font-heading); font-size:18px;">M.Sc. Research in Media Engineering</div>
-      <div class="text-muted" style="font-size:13px; margin:4px 0 10px;">Ilmenau University of Technology, Germany · 2026 – present</div>
-      <p style="font-size:13px; opacity:.85; margin:0;">Research focused on UX and data analysis. Co-authored conference paper on LLM-based error pattern identification.</p>
-    </div>
-    <div class="blueprint" style="padding:18px 20px;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <div style="font-family:var(--font-heading); font-size:18px;">B.Sc. Computer Science</div>
-      <div class="text-muted" style="font-size:13px; margin:4px 0 10px;">Mohammad Ali Jinnah University, Karachi</div>
-      <p style="font-size:13px; opacity:.85; margin:0;">Foundation for BA, ERP and data-focused roles.</p>
-    </div>
-    <div class="blueprint" style="padding:18px 20px;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <div style="font-family:var(--font-heading); font-size:18px;">Postgraduate Diploma (Level 7), Strategic Management &amp; Leadership</div>
-      <div class="text-muted" style="font-size:13px; margin:4px 0 10px;">London College of Professional Studies</div>
-      <p style="font-size:13px; opacity:.85; margin:0;">Strategic Management, Strategic Leadership, Supply Chain &amp; Operations Management.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="wrap" style="padding:24px 24px 88px;">
-  <h6 style="color:var(--color-accent-700);">Let's talk</h6>
-  <h2 style="margin-bottom:8px;">Contact</h2>
-  <p class="text-muted" style="max-width:520px; margin-bottom:32px;">Open to procurement, business-analyst and data/automation roles — part-time or full-time.</p>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
-    <div>
-      <div style="display:flex; flex-direction:column; gap:14px;">
-        <a href="mailto:huzaifaaziz90@gmail.com" style="display:flex; align-items:center; gap:12px; color:var(--color-text);">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg>
-          huzaifaaziz90@gmail.com
-        </a>
-        <a href="tel:+4915567366402" style="display:flex; align-items:center; gap:12px; color:var(--color-text);">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.4 21 3 14.6 3 6a2 2 0 0 1 2-2z"></path></svg>
-          +49 15567 366402
-        </a>
-        <a href="https://www.linkedin.com/in/huzaifah-aziz-63092996/" target="_blank" style="display:flex; align-items:center; gap:12px; color:var(--color-text);">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="8" y1="11" x2="8" y2="16"></line><circle cx="8" cy="8" r="0.6" fill="currentColor"></circle><path d="M12 16v-3a2 2 0 0 1 4 0v3"></path><line x1="12" y1="11" x2="12" y2="16"></line></svg>
-          LinkedIn profile
-        </a>
-        <a href="https://github.com/huzaifaaziz90" target="_blank" style="display:flex; align-items:center; gap:12px; color:var(--color-text);">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.35 9.35 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-          GitHub — huzaifaaziz90
-        </a>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
-          Ilmenau, Germany
-        </div>
+<body>
+  <header class="topbar"><nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="#home">HA<b>.</b></a>
+    <div class="navlinks"><a href="#about">Approach</a><a href="#experience">Experience</a><a href="#work">Selected work</a><a href="#capabilities">Capabilities</a><a href="#contact">Contact</a></div>
+    <div class="navtools"><button class="iconbtn" id="cmd" aria-label="Open quick navigation">⌘ K</button><button class="iconbtn" id="theme" aria-label="Toggle color theme">◐</button><button class="menu-btn" id="menu" aria-label="Show navigation">Menu</button></div>
+  </nav></header>
+  <main>
+    <section class="hero wrap" id="home">
+      <div>
+        <div class="eyebrow mono"><i class="dot"></i> Berlin, Germany <span style="color:var(--line)">/</span> Available within one month</div>
+        <h1>Make complex work<br><span>easier to act on.</span></h1>
+        <p class="hero-copy">I work where <strong>procurement operations, business analysis and data</strong> meet. I turn busy workflows into clearer decisions with reporting, requirements and practical tools.</p>
+        <div class="actions"><a class="button" href="#work">Explore selected work <span aria-hidden="true">↘</span></a><a class="button secondary" href="mailto:huzaifaaziz90@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div>
+        <div class="quickfacts"><span><i></i> Procurement operations</span><span><i></i> Business analysis</span><span><i></i> Data and automation</span></div>
       </div>
-    </div>
-    <form action="mailto:huzaifaaziz90@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:14px;">
-      <div class="field"><label for="cname">Name</label><input id="cname" name="Name" required class="input"></div>
-      <div class="field"><label for="cemail">Email</label><input id="cemail" name="Email" type="email" required class="input"></div>
-      <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" name="Message" required class="input" rows="4"></textarea></div>
-      <button type="submit" class="btn btn-primary btn-block">Send message</button>
-    </form>
-  </div>
-</section>
-
-<footer style="border-top:1px solid var(--color-divider); padding:24px; text-align:center;">
-  <span class="text-muted" style="font-size:12px;">© 2026 Huzaifa Aziz — Built with Cmd+K, dark mode, and a filterable project gallery.</span>
-</footer>
-
-<script>
-const EXPERIENCES = [
-  { id:'solvay', role:'Procurement Operations Analyst', company:'Solvay Saudi Services Company', location:'Al Jubail, Saudi Arabia', dates:'Nov 2024 – Apr 2026', tags:['Procurement','Data & Reporting','Automation'],
-    bullets:[
-      'Managed end-to-end Purchase-to-Pay across OPEX, CAPEX, and plant-turnaround procurement in SAP MM, covering 1,000+ active Purchase Requisitions across the department.',
-      'Built Power BI dashboards using DAX: PR-PO status tracking across 1,000+ active PRs and supplier performance dashboards covering ~400 vendors.',
-      'Developed Python automation tools to generate real-time KPI reports for senior leadership.',
-      'Created automated per-member priority reporting using VBA and Google Apps Script, reducing manual tracking effort across the team.',
-      'Used Power Automate and Zapier for workflow automation alongside the above tooling.',
-      'Led strategic sourcing across a ~400-vendor base: vendor evaluation, onboarding, performance analysis, and price negotiation.',
-      'Coordinated with vendors across Europe (Germany, Italy, Belgium, Netherlands), Asia (Japan), and international markets.',
-      'Collaborated cross-functionally with Mechanical Engineering, QHSE, Finance, and Logistics on purchasing, compliance, and audit requirements.'
-    ]},
-  { id:'bitdev', role:'Associate Business Analyst', company:'BitDevelopment.dev — R&D Wing, Sandline Global', location:'Remote', dates:'Jan 2024 – Nov 2024', tags:['Business Analysis','Agile','Product'],
-    bullets:[
-      'Gathered and documented stakeholder requirements, translating needs into EPICs, user stories, and acceptance criteria managed in Jira and Confluence — 4 projects running simultaneously, roughly 20–40 open tasks at a time.',
-      'Wrote BRDs, SRDs, and user manuals to reduce ambiguity between business, development, and testing.',
-      'Created wireframes and interactive prototypes in Balsamiq and Figma to validate requirements before development.',
-      'Facilitated Agile ceremonies across 4 concurrent sprints: sprint planning, backlog refinement, daily standups, reviews, retrospectives.',
-      'Collaborated daily with international end-users based in Germany and the USA.',
-      'Supported UAT by validating outputs against business rules and acceptance criteria.',
-      'Analysed workflows across 5 products: translation tool (Google/AWS/Azure), modern ETL pipeline, and billing dashboard.'
-    ]},
-  { id:'keenu', role:'Product Manager', company:'Keenu (Fintech)', location:'Karachi, Pakistan', dates:'Mar 2023 – Jan 2024', tags:['Product','Fintech'],
-    bullets:[
-      'Analysed product issues, support cases, and user feedback to identify root causes and coordinate resolution with technical teams across digital payment and POS products.',
-      'Prepared product documentation, user guides, and workflow explanations for internal and external stakeholders.',
-      'Ran pilot campaigns for loyalty-based products and performed analysis and forecasting on their performance.',
-      'Worked cross-functionally with Back Office, Sales, Finance, and Development.'
-    ]},
-  { id:'lucid', role:'Junior Business Analyst', company:'Lucid Web Solution', location:'Karachi, Pakistan', dates:'Aug 2022 – Feb 2023', tags:['Business Analysis'],
-    bullets:[
-      'Supported ~3 concurrent web and software development projects.',
-      'Gathered requirements and prepared user stories, functional notes, and requirement clarifications.',
-      'Coordinated between clients and developers to keep delivery aligned with business needs.'
-    ]}
-];
-
-const PROJECTS = [
-  { id:'powerbi', title:'Power BI Procurement Dashboard', tag:'Data & Reporting', desc:'Procurement KPI dashboard with DAX measures covering order pipeline, department workload, supplier spend, and cycle times. Includes data model and full build guide.', link:'https://github.com/huzaifaaziz90/project1-powerbi-dashboard' },
-  { id:'priorityauto', title:'Priority Item Reporting Automation', tag:'Automation', desc:'Flags procurement orders needing urgent action using three alert rules and generates per-department summaries. Python version plus the original Google Apps Script email-dispatch implementation.', link:'https://github.com/huzaifaaziz90/project3-priority-automation' },
-  { id:'llmreports', title:'LLM-Assisted Report Generator', tag:'Automation', desc:'Generates natural-language procurement status summaries per department from structured order data using the Anthropic API. Built on top of the priority automation pipeline.', link:'https://github.com/huzaifaaziz90/project4-llm-reports' },
-  { id:'translate', title:'Translation & Transcription Tool', tag:'Systems Integration', desc:'Requirements and task breakdown for translation/transcription features across Google, AWS and Azure services — toggle logic, provider routing, export handling.' },
-  { id:'etl', title:'Modern ETL Pipeline', tag:'Data & Reporting', desc:'Requirements for UFDR, Slack JSON and Teams PST extraction — refined JSON output, metadata handling, deduplication and report generation.' },
-  { id:'billing', title:'Storage Tracker & Billing Dashboard', tag:'Data & Reporting', desc:'Requirements for billing data visibility, matter data, filters, CSV export, NetSuite ingestion and reporting improvements.' },
-  { id:'ftp', title:'FTP Scanner', tag:'Systems Integration', desc:'Discovery and reporting requirements for folder scanning and operational visibility.' },
-  { id:'imanage', title:'iManage Export', tag:'Systems Integration', desc:'Export configuration, source field mapping, encrypted credentials, status propagation and migration tasks.' }
-];
-
-const SKILL_GROUPS = [
-  { name:'Procurement & Supply Chain', tier:'Advanced', target:92, items:['SAP Materials Management (MM)','Purchase-to-Pay (P2P)','Vendor & Contract Management','RFQ & Strategic Sourcing','Delivery & Invoice Coordination','International Procurement'] },
-  { name:'Business Analysis & Product', tier:'Advanced', target:88, items:['Requirements & User Stories','EPICs, BRDs, SRDs','Jira & Confluence','UAT Coordination','Stakeholder Management','Wireframes (Balsamiq, Figma)'] },
-  { name:'Data, Reporting & Automation', tier:'Strong', target:80, items:['Power BI (DAX)','Python (pandas, automation)','Excel (Pivot, Power Query, XLOOKUP)','SQL','VBA & Google Apps Script','Power Automate / Zapier / n8n'] },
-  { name:'Systems & Tools', tier:'Working', target:60, items:['GitHub Actions','Node.js + Express','React','Google Sheets API / Drive API','Coupa','Microsoft 365 / Google Workspace'] }
-];
-
-const LANGUAGES = [
-  { name:'English', tier:'Professional / C1–C2', target:95 },
-  { name:'German', tier:'Beginner — learning', target:20 }
-];
-
-function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
-
-// Jobs
-const jobsList = document.getElementById('jobs-list');
-EXPERIENCES.forEach((job) => {
-  const el = document.createElement('div');
-  el.className = 'job' + (job.id === 'solvay' ? ' expanded' : '');
-  el.innerHTML = `
-    <div class="job-dot"></div>
-    <div class="blueprint job-card">
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <div class="job-head">
-        <div>
-          <div class="job-role">${esc(job.role)}</div>
-          <div class="job-meta text-muted">${esc(job.company)} · ${esc(job.location)}</div>
-        </div>
-        <div style="display:flex; align-items:center; gap:10px;">
-          <span class="tag tag-accent">${esc(job.dates)}</span>
-          <svg class="job-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"></path></svg>
-        </div>
-      </div>
-      <div class="job-tags">${job.tags.map(t => `<span class="tag tag-neutral">${esc(t)}</span>`).join('')}</div>
-      <ul class="job-bullets">${job.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
-    </div>`;
-  el.querySelector('.job-card').addEventListener('click', () => {
-    const wasOpen = el.classList.contains('expanded');
-    jobsList.querySelectorAll('.job').forEach(j => j.classList.remove('expanded'));
-    if (!wasOpen) el.classList.add('expanded');
-  });
-  jobsList.appendChild(el);
-});
-
-// Projects (excluding ProcureAlert which is featured separately)
-const projGrid = document.getElementById('proj-grid');
-const projFilters = document.getElementById('proj-filters');
-let currentFilter = 'All';
-
-function renderProjects() {
-  projGrid.innerHTML = PROJECTS.filter(p => currentFilter === 'All' || p.tag === currentFilter).map(p => `
-    <div class="blueprint card proj-card visible" style="border-radius:0;">
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <div class="card-kicker">${esc(p.tag)}</div>
-      <div class="card-title">${esc(p.title)}</div>
-      <p class="card-body">${esc(p.desc)}</p>
-      ${p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; margin-top:10px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.35 9.35 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        View on GitHub
-      </a>` : ''}
-    </div>`).join('');
-}
-
-['All','Data & Reporting','Automation','Systems Integration'].forEach(f => {
-  const btn = document.createElement('button');
-  btn.className = f === currentFilter ? 'btn btn-primary' : 'btn btn-secondary';
-  btn.textContent = f;
-  btn.addEventListener('click', () => {
-    currentFilter = f;
-    projFilters.querySelectorAll('button').forEach(b => b.className = b.textContent === f ? 'btn btn-primary' : 'btn btn-secondary');
-    renderProjects();
-  });
-  projFilters.appendChild(btn);
-});
-renderProjects();
-
-// Skills
-const skillsGrid = document.getElementById('skills-grid');
-SKILL_GROUPS.forEach(g => {
-  const el = document.createElement('div');
-  el.innerHTML = `
-    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
-      <h4 style="margin:0;">${esc(g.name)}</h4>
-      <span class="tag tag-outline">${esc(g.tier)}</span>
-    </div>
-    <div class="skill-bar-track"><div class="skill-bar-fill" data-target="${g.target}"></div></div>
-    <div style="display:flex; gap:6px; flex-wrap:wrap;">${g.items.map(it => `<span class="tag tag-neutral">${esc(it)}</span>`).join('')}</div>`;
-  skillsGrid.appendChild(el);
-});
-
-const langsGrid = document.getElementById('langs-grid');
-LANGUAGES.forEach(l => {
-  const el = document.createElement('div');
-  el.innerHTML = `
-    <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span>${esc(l.name)}</span><span class="text-muted">${esc(l.tier)}</span></div>
-    <div class="skill-bar-track" style="margin-bottom:0;"><div class="lang-bar-fill" data-target="${l.target}"></div></div>`;
-  langsGrid.appendChild(el);
-});
-
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      document.querySelectorAll('.skill-bar-fill, .lang-bar-fill').forEach(bar => { bar.style.width = bar.dataset.target + '%'; });
-      io.disconnect();
-    }
-  });
-}, { threshold: 0.2 });
-io.observe(document.getElementById('skills'));
-
-// Theme
-const themeBtn = document.getElementById('theme-btn');
-const iconMoon = document.getElementById('icon-moon');
-const iconSun = document.getElementById('icon-sun');
-function applyTheme(t) {
-  document.body.setAttribute('data-theme', t);
-  iconMoon.style.display = t === 'dark' ? 'block' : 'none';
-  iconSun.style.display = t === 'dark' ? 'none' : 'block';
-}
-let savedTheme = 'light';
-try { const s = localStorage.getItem('resume-theme'); if (s === 'dark' || s === 'light') savedTheme = s; } catch (e) {}
-applyTheme(savedTheme);
-themeBtn.addEventListener('click', () => {
-  const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
-  try { localStorage.setItem('resume-theme', next); } catch (e) {}
-});
-
-// Command palette
-const paletteBackdrop = document.getElementById('palette-backdrop');
-const paletteInput = document.getElementById('palette-input');
-const paletteList = document.getElementById('palette-list');
-function commands() {
-  const isDark = document.body.getAttribute('data-theme') === 'dark';
-  return [
-    { label: 'Go to Experience', hint: 'Section', run: () => location.hash = '#experience' },
-    { label: 'Go to Projects', hint: 'Section', run: () => location.hash = '#projects' },
-    { label: 'Go to Skills', hint: 'Section', run: () => location.hash = '#skills' },
-    { label: 'Go to Education', hint: 'Section', run: () => location.hash = '#education' },
-    { label: 'Go to Contact', hint: 'Section', run: () => location.hash = '#contact' },
-    { label: isDark ? 'Switch to light mode' : 'Switch to dark mode', hint: 'Theme', run: () => themeBtn.click() },
-    { label: 'Copy email address', hint: 'Contact', run: () => { try { navigator.clipboard.writeText('huzaifaaziz90@gmail.com'); } catch (e) {} } },
-    { label: 'Download résumé (PDF)', hint: 'Open', run: () => window.open('resume-print.html?print=1', '_blank') },
-    { label: 'Open LinkedIn profile', hint: 'Open', run: () => window.open('https://www.linkedin.com/in/huzaifah-aziz-63092996/', '_blank') },
-    { label: 'Open GitHub profile', hint: 'Open', run: () => window.open('https://github.com/huzaifaaziz90', '_blank') },
-    { label: 'Open ProcureAlert repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/procurement-alert-system', '_blank') },
-    { label: 'Open Power BI Dashboard repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/project1-powerbi-dashboard', '_blank') },
-    { label: 'Open Priority Automation repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/project3-priority-automation', '_blank') },
-    { label: 'Open LLM Reports repo', hint: 'GitHub', run: () => window.open('https://github.com/huzaifaaziz90/project4-llm-reports', '_blank') }
-  ];
-}
-function renderPalette() {
-  const q = paletteInput.value.trim().toLowerCase();
-  const list = commands().filter(c => !q || c.label.toLowerCase().includes(q));
-  paletteList.innerHTML = list.length
-    ? list.map((c, i) => `<div class="palette-item" data-i="${i}"><span>${esc(c.label)}</span><span class="text-muted" style="font-size:11px;">${esc(c.hint)}</span></div>`).join('')
-    : `<div class="text-muted" style="padding:14px 12px; font-size:13px;">No matches.</div>`;
-  paletteList.querySelectorAll('.palette-item').forEach(el => {
-    el.addEventListener('click', () => { list[+el.dataset.i].run(); closePalette(); });
-  });
-}
-function openPalette() { paletteInput.value = ''; paletteBackdrop.classList.add('open'); renderPalette(); paletteInput.focus(); }
-function closePalette() { paletteBackdrop.classList.remove('open'); }
-document.getElementById('palette-btn').addEventListener('click', openPalette);
-paletteInput.addEventListener('input', renderPalette);
-paletteBackdrop.addEventListener('click', (e) => { if (e.target === paletteBackdrop) closePalette(); });
-window.addEventListener('keydown', (e) => {
-  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); paletteBackdrop.classList.contains('open') ? closePalette() : openPalette(); }
-  else if (e.key === 'Escape' && paletteBackdrop.classList.contains('open')) closePalette();
-});
-</script>
+      <div class="portrait-wrap"><div class="portrait-frame"><img src="assets/huzaifa-aziz.jpg" alt="Portrait of Huzaifa Aziz"></div><div class="portrait-note">FIELD NOTES · 2026</div><div class="portrait-mark"><b>From the workflow<br>to the working tool.</b><span>Analysis with an operator’s view.</span></div></div>
+    </section>
+    <div class="proof"><div class="wrap proof-grid">
+      <div class="proof-item"><span class="proof-num">1,000+</span><span class="proof-label">active purchase requisitions supported at Solvay</span></div>
+      <div class="proof-item"><span class="proof-num">~400</span><span class="proof-label">vendors represented in supplier reporting</span></div>
+      <div class="proof-item"><span class="proof-num">4</span><span class="proof-label">concurrent delivery projects at BitDevelopment</span></div>
+      <div class="proof-item"><span class="proof-num">100+</span><span class="proof-label">customer chats handled daily at BreakThru</span></div>
+    </div></div>
+    <section class="content wrap" id="about"><div class="section-head"><div><div class="mono section-no">01 / Working style</div><h2>Grounded in operations.<br>Built around people.</h2></div><p>A thread through my work: understand what is getting in the way, make the problem visible, then help move a useful solution into practice.</p></div>
+      <div class="story-grid reveal"><div class="story-lede"><span class="mono">THE THROUGH LINE</span><h3>Good analysis should change what someone can do next.</h3></div><div class="story-right"><p>At Solvay, I worked across Purchase-to-Pay operations and built reporting for Procurement, Finance and Operations. In software teams, I translated stakeholder needs into requirements, prototypes and acceptance criteria. In my independent projects, I am applying that same practical lens to procurement reporting and product feedback. <strong>I enjoy connecting the detail of a process to a solution people can use.</strong></p></div></div>
+    </section>
+    <section class="content wrap" id="experience"><div class="section-head"><div><div class="mono section-no">02 / Career path</div><h2>Experience</h2></div><p>Operations, product and software delivery across industrial procurement, fintech and technology teams.</p></div>
+      <div class="experience"><aside class="exp-intro"><div class="mono">2022 — 2026</div><p>Reverse chronological experience. Select “More detail” to expand additional responsibilities.</p><a class="textlink" href="https://www.linkedin.com/in/huzaifah-aziz-63092996/" target="_blank" rel="noreferrer">Full profile ↗</a></aside><div class="timeline">
+        <article class="job"><time>Nov 2024 — Apr 2026</time><div><h3>Procurement Operations Analyst</h3><div class="job-org">Solvay Saudi Services Company · Al Jubail, Saudi Arabia</div><ul><li>Managed end-to-end Purchase-to-Pay operations in SAP MM across OPEX, CAPEX and plant turnaround activity, covering more than 1,000 active requisitions.</li><li>Built Power BI dashboards with DAX for PR-to-PO visibility and supplier performance across approximately 400 vendors.</li><li>Developed Python KPI reporting for senior leadership and automated departmental reporting with VBA and Google Apps Script.</li><li>Led process improvement through root cause analysis and workflow mapping; supported sourcing, supplier evaluation and coordination across Engineering, QHSE, Finance and Logistics.</li><li class="extra">Coordinated suppliers across Europe, Asia and other markets and participated in price negotiations. No quantified savings claim is included.</li></ul><button class="job-more">More detail +</button></div></article>
+        <article class="job"><time>Jan 2024 — Nov 2024</time><div><h3>Associate Business Analyst</h3><div class="job-org">BitDevelopment.dev, R&amp;D Wing of Sandline Global · Remote</div><ul><li>Gathered requirements and created EPICs, user stories, acceptance criteria, BRDs, SRDs and manuals across four concurrent projects using Jira and Confluence.</li><li>Facilitated Agile ceremonies, created Balsamiq and Figma prototypes, and supported UAT with international end users in Germany and the USA.</li><li class="extra">Worked with stakeholders and delivery teams to clarify workflows and validate outcomes against business rules.</li></ul><button class="job-more">More detail +</button></div></article>
+        <article class="job"><time>Mar 2023 — Jan 2024</time><div><h3>Business Analyst</h3><div class="job-org">Keenu · Fintech · Karachi, Pakistan</div><ul><li>Analysed payment and POS product issues, support cases and user feedback, then coordinated technical investigation and resolution.</li><li>Ran loyalty product pilot campaigns and analysed and forecast performance with Back Office, Sales, Finance and Development.</li><li class="extra">Documented product workflows and surfaced recurring process gaps to support product and operational improvements.</li></ul><button class="job-more">More detail +</button></div></article>
+        <article class="job"><time>Aug 2022 — Feb 2023</time><div><h3>Junior Business Analyst</h3><div class="job-org">Lucid Web Solution · Karachi, Pakistan</div><ul><li>Supported approximately three concurrent web and software projects through requirements gathering, user stories, testing and client-developer coordination.</li></ul></div></article>
+        <article class="job"><time>Mar 2019 — Aug 2022</time><div><h3>Customer Service Representative</h3><div class="job-org">BreakThru · Part time · Karachi, Pakistan</div><ul><li>Handled more than 100 customer chats per day for a human and AI-powered customer engagement service, escalated complex issues and managed junior representatives.</li></ul></div></article>
+      </div></div>
+    </section>
+    <section class="content wrap" id="work"><div class="section-head"><div><div class="mono section-no">03 / Selected work</div><h2>Tools for clearer decisions.</h2></div><p>Independent projects that connect real operating questions with data, product workflows and software.</p></div>
+      <article class="project-feature reveal"><div class="project-copy"><div class="project-top"><span class="mono project-label">PROCUREMENT INTELLIGENCE · PERSONAL PROJECT</span><span class="mono muted">01</span></div><h3>ProcureAlert<br>2.0</h3><p>A procurement monitoring application for bringing spreadsheet data into configurable reports. The current rebuild uses a TypeScript monorepo and combines data-source setup, KPI reporting, alerts and report history in one product.</p><div class="chips"><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">Drizzle ORM</span><span class="chip">Clerk</span><span class="chip">Excel / CSV</span><span class="chip">Google Sheets</span></div><a class="button" href="https://procurement-alert-system-v2-web.vercel.app/" target="_blank" rel="noreferrer">Open live project ↗</a> <a class="button secondary" href="https://github.com/huzaifaaziz90/procurement-alert-system-v2" target="_blank" rel="noreferrer">Source code ↗</a></div>
+        <div class="project-art" aria-label="Illustration of a procurement reporting dashboard"><div class="gridlines"></div><div class="mock"><div class="mock-head"><span class="mock-logo">PROCURE<i>ALERT</i></span><span class="pill">● REPORT READY</span></div><div class="mock-stats"><div class="mock-stat"><b>Sources</b><small>Excel · Sheets</small></div><div class="mock-stat"><b>KPIs</b><small>Configurable</small></div><div class="mock-stat"><b>Reports</b><small>Private history</small></div></div><div class="mock-row"><b>Supplier performance</b><span>On time rate</span><span class="pill">Tracked</span></div><div class="mock-row"><b>Delivery watch</b><span>Overdue items</span><span class="pill">Alert</span></div><div class="mock-row"><b>PR to PO</b><span>Cycle visibility</span><span class="pill">Trend</span></div><div class="mock-bars"><i style="height:35%"></i><i style="height:55%"></i><i style="height:43%"></i><i style="height:79%"></i><i style="height:64%"></i><i style="height:92%"></i><i style="height:73%"></i><i style="height:100%"></i><i style="height:82%"></i></div></div><div class="project-note">REPORTING WORKFLOW / 2026</div></div>
+      </article>
+      <div class="project-pair"><article class="mini-project reveal"><div class="mono section-no">02 / Product intelligence · Independent build</div><h3>Happy Morse</h3><p>An AI-assisted product feedback system that organises customer signals into evidence-linked problems, a decision inbox and product work, with review before external delivery.</p><div class="chips"><span class="chip">Next.js</span><span class="chip">PostgreSQL</span><span class="chip">Product discovery</span><span class="chip">AI workflows</span></div></article>
+        <article class="mini-project reveal"><div class="mono section-no">03 / Professional practice</div><h3>Procurement reporting &amp; automation</h3><p>At Solvay, developed reporting workflows and Power BI dashboards to make requisition status and supplier performance easier to review across departments.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Python</span><span class="chip">VBA</span><span class="chip">Google Apps Script</span></div></article></div>
+    </section>
+    <section class="content wrap" id="capabilities"><div class="section-head"><div><div class="mono section-no">04 / What I bring</div><h2>Useful at the seams.</h2></div><p>A mix of process context and hands-on analysis helps me connect teams, data and delivery.</p></div>
+      <div class="cap-grid"><article class="cap reveal"><span class="mono">01 / OPERATIONS</span><h3>Procurement &amp; P2P</h3><p>SAP MM, purchase requisitions and orders, supplier coordination, sourcing support, delivery follow-up and process improvement.</p></article><article class="cap reveal"><span class="mono">02 / DELIVERY</span><h3>Business analysis</h3><p>Requirements, user stories, EPICs, BRDs, SRDs, acceptance criteria, Jira, Confluence, prototyping and UAT.</p></article><article class="cap reveal"><span class="mono">03 / INSIGHT</span><h3>Data &amp; automation</h3><p>Power BI and DAX, Python reporting, advanced Excel, SQL, VBA, Google Apps Script and workflow automation.</p></article></div>
+    </section>
+    <section class="content wrap" id="education"><div class="section-head"><div><div class="mono section-no">05 / Education</div><h2>Learning in progress.</h2></div><p>Formal study alongside practical work in technology, operations and product systems.</p></div><div class="education"><article class="edu"><span class="mono">2026 — Present · Part time</span><h3>M.Sc. Research in Media Engineering</h3><p>Technische Universität Ilmenau</p></article><article class="edu"><span class="mono">Completed · 2022</span><h3>B.Sc. Computer Science</h3><p>Mohammad Ali Jinnah University</p></article><article class="edu"><span class="mono">2023</span><h3>Level 7 Diploma, Strategic Management and Leadership</h3><p>OTHM · London College of Professional Studies</p></article><article class="edu"><span class="mono">LANGUAGE</span><h3>English</h3><p>Professional proficiency</p></article></div></section>
+    <section class="wrap" id="contact"><div class="contact"><div><span class="mono">06 / Start a conversation</span><h2>Have a challenge<br>worth untangling?</h2><p>Based in Berlin and open to roles across procurement operations, business analysis, product operations and data-enabled process improvement. Available to start within one month.</p><a class="button" style="background:var(--lime);border-color:var(--lime);color:#1a271e" href="mailto:huzaifaaziz90@gmail.com">Email Huzaifa ↗</a></div><div class="contact-links"><a href="mailto:huzaifaaziz90@gmail.com">huzaifaaziz90@gmail.com <span>EMAIL ↗</span></a><a href="tel:+4915567366402">+49 15567 366402 <span>PHONE ↗</span></a><a href="https://www.linkedin.com/in/huzaifah-aziz-63092996/" target="_blank" rel="noreferrer">LinkedIn <span>PROFILE ↗</span></a><a href="https://github.com/huzaifaaziz90" target="_blank" rel="noreferrer">GitHub <span>PROJECTS ↗</span></a></div></div></section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> Huzaifa Aziz</span><span>Procurement · Analysis · Product systems</span><a href="#home">Back to top ↑</a></footer>
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Quick navigation"><div class="palette-box"><input id="palette-input" placeholder="Jump to a section..." aria-label="Filter navigation"><div id="palette-links"><a href="#about">Approach</a><a href="#experience">Experience</a><a href="#work">Selected work</a><a href="#capabilities">Capabilities</a><a href="#education">Education</a><a href="#contact">Contact</a></div></div></div>
+  <script>
+    document.documentElement.dataset.theme=localStorage.getItem('ha-theme')||'light';
+    document.getElementById('theme').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('ha-theme',next)});
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.querySelectorAll('.job-more').forEach(b=>b.addEventListener('click',()=>{const job=b.closest('.job');job.classList.toggle('open');b.textContent=job.classList.contains('open')?'Less detail −':'More detail +'}));
+    const palette=document.getElementById('palette'),input=document.getElementById('palette-input');
+    const close=()=>{palette.classList.remove('show');input.value='';document.querySelectorAll('#palette-links a').forEach(a=>a.hidden=false)};
+    const open=()=>{palette.classList.add('show');input.focus()};document.getElementById('cmd').addEventListener('click',open);document.getElementById('menu').addEventListener('click',open);
+    document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();open()}if(e.key==='Escape')close()});
+    palette.addEventListener('click',e=>{if(e.target===palette)close()});document.querySelectorAll('#palette-links a').forEach(a=>a.addEventListener('click',close));
+    input.addEventListener('input',()=>{const q=input.value.toLowerCase();document.querySelectorAll('#palette-links a').forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(q))});
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
 </body>
 </html>
